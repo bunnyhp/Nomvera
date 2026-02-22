@@ -1,0 +1,20 @@
+{
+  "name": "Nomvera-ai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion render src/index.ts NomveraHeroMotion out/Nomvera-hero-motion.mp4",
+    "build:webm": "remotion render src/index.ts NomveraHeroMotion out/Nomvera-hero-motion.webm --codec libvpx-vp9"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}

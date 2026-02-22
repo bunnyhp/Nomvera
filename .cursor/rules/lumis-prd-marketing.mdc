@@ -1,0 +1,57 @@
+---
+description: Nomvera AI PRD positioning, personas, and B2B landing/marketing consistency
+globs: "**/*Landing*.html","**/Nomvera-AI*.md","**/Lumis-AI*.html"
+alwaysApply: false
+---
+
+# Nomvera AI - PRD and Marketing Consistency
+
+Use this rule when editing Nomvera AI landing copy, marketing pages, or PRD-derived content so messaging stays aligned with the product and B2B conversion best practices.
+
+## One-Liner (canonical)
+
+Nomvera AI is a **managed AI training and evaluation firm** that gives frontier model companies access to a **pre-vetted, academically credentialed workforce** - sourced **exclusively from U.S. graduate programs** - **faster and with greater domain fidelity** than any crowdsourced platform can offer.
+
+## Primary persona: Priya (AI Research Lead / Head of Post-Training)
+
+- Manages $8–20M annually for RLHF and evaluation data.
+- Decision criteria, in order: (1) verifiable annotator credentials in target domains, (2) consistent output quality without continuous oversight, (3) vendor not serving direct competitors, (4) pricing defensible to VP.
+
+## Secondary persona: Enterprise AI Program Manager
+
+- Large bank, healthcare, or defense contractor; fine-tuning on proprietary workflows.
+- Needs: NDA-ready, verifiable credentials, data out of shared annotation pools (isolated project teams).
+
+## Who this is NOT for
+
+- Startups needing 50,000 labeled images at lowest unit price.
+- High-volume, low-complexity annotation well-served by automated tooling.
+- Any company treating annotation as commodity procurement.
+
+Use a short qualifier in copy where appropriate: e.g. "Built for frontier labs and enterprises - not for commodity, high-volume image annotation."
+
+## Key differentiators (use consistently)
+
+- **Credentials:** Verified U.S. graduate-degree holders, transcript-reviewed; 100% U.S. graduate credentials.
+- **Quality:** ≥94% inter-annotator agreement target; calibration before production.
+- **Speed:** ≤10 business days to first delivery (in-pool domains).
+- **Vendor independence:** Independent; no strategic investment from model developers; no conflict of interest.
+- **Data governance:** Isolated project teams; no cross-client data exposure; NDA-ready.
+
+## Market numbers (PRD source of truth)
+
+- 2024: **$2.82 billion**.
+- 2029: **$9.58 billion**.
+- Annual growth: **27.7%**.
+- Do not use unsourced stats (e.g. "55% outsourced share") unless a source is added.
+
+## B2B conversion principles
+
+- **One primary CTA** per section; secondary CTAs styled clearly as secondary (e.g. outline vs solid).
+- **Problem-aware hero:** Headline/subline should reflect the problem (crowdsourced ceiling, vendor risk, quality rework) or the outcome (domain fidelity, trust, speed).
+- **Trust and social proof:** Lead with credentials, independence, and quality metrics; use testimonials with industry context (e.g. Frontier AI Lab, Financial Services) where possible.
+- **Forms (when added):** Keep to 5 or fewer fields; ask only what’s needed to start the conversation.
+
+## Optional retention / proof
+
+- PRD target: ≥80% client retention (6-month); retainer conversion. Can surface as "80%+ client retention" or "Retainer conversion" in trust bar if desired.
