@@ -2,6 +2,7 @@
   "buildCommand": "",
   "rewrites": [
     { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/privacy", "destination": "/privacy.html" }
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/research/llm01-prompt-injection", "destination": "/research/llm01-prompt-injection.html" }
   ]
 }

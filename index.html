@@ -258,6 +258,7 @@
   #solution { padding: 8rem 4rem; }
   #pipeline { padding: 7rem 4rem; }
   #proof { padding: 6rem 4rem; }
+  #llm-security { padding: 7rem 4rem; }
   #market { padding: 7rem 4rem; }
   #cta { padding: 10rem 4rem; }
 
@@ -576,6 +577,52 @@
     width: 30px; height: 1px; background: var(--gold); margin-bottom: 1.5rem;
   }
 
+  /* LLM SECURITY (OWASP LLM01) */
+  #llm-security { background: var(--deep); position: relative; overflow: hidden; }
+  #llm-security .llm-sec-glow {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,152,74,0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .llm-sec-header { text-align: center; max-width: 640px; margin: 0 auto 4rem; }
+  .llm-sec-header .solution-sub { margin-top: 1rem; }
+  .llm-sec-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--border); border: 1px solid var(--border);
+    margin-top: 3rem;
+  }
+  .llm-sec-card {
+    background: var(--black); padding: 2.5rem;
+    position: relative; overflow: hidden;
+    border-left: 2px solid transparent;
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out), border-color 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+  }
+  .llm-sec-card.visible { opacity: 1; transform: translateY(0); }
+  .llm-sec-card:hover {
+    border-left-color: var(--gold-mid);
+    box-shadow: 0 0 0 1px var(--border);
+  }
+  .llm-sec-card .service-num {
+    font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.25rem;
+  }
+  .llm-sec-card h3 {
+    font-family: var(--font-display); font-size: 1.35rem; font-weight: 500;
+    color: var(--white); line-height: 1.25; margin-bottom: 0.75rem;
+  }
+  .llm-sec-card p { font-size: 0.88rem; line-height: 1.75; color: var(--muted); }
+  .llm-sec-cta { margin-top: 3rem; text-align: center; }
+  .llm-sec-cta .btn-secondary {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+  }
+  .llm-sec-cta .btn-secondary svg { transition: transform 0.25s; }
+  .llm-sec-cta .btn-secondary:hover svg { transform: translateX(4px); }
+  @media (max-width: 900px) {
+    .llm-sec-grid { grid-template-columns: 1fr; }
+  }
+
   /* MARKET */
   .market-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
   .market-visual {
@@ -715,6 +762,7 @@
     <a href="#solution">Services</a>
     <a href="#pipeline">Process</a>
     <a href="#differentiation">Why Us</a>
+    <a href="#llm-security">Security</a>
     <a href="contact.html">Contact</a>
     <a href="contact.html?type=brief" class="nav-cta">Request a Brief</a>
   </div>
@@ -1032,6 +1080,41 @@
   </div>
 </section>
 
+<!-- LLM SECURITY (OWASP LLM01) -->
+<section id="llm-security">
+  <div class="llm-sec-glow" aria-hidden="true"></div>
+  <div class="llm-sec-header">
+    <div class="section-tag reveal">Security Research</div>
+    <h2 class="solution-title reveal">Prompt injection, agent abuse,<br><em>and how we defend.</em></h2>
+    <p class="solution-sub reveal">Frontier models and agentic systems are exposed to prompt injection and tool abuse. We apply OWASP LLM01–aligned test cases and defenses in evaluation and red-teaming so your deployments stay secure.</p>
+  </div>
+  <div class="llm-sec-grid">
+    <div class="llm-sec-card">
+      <div class="service-num">01</div>
+      <h3>Prompt injection</h3>
+      <p>Attackers inject instructions via user input or retrieved content to override system behavior, leak system prompts, or bypass safety. We test direct and indirect injection, role override, and delimiter confusion.</p>
+    </div>
+    <div class="llm-sec-card">
+      <div class="service-num">02</div>
+      <h3>Agent & tool abuse</h3>
+      <p>LLM agents that call tools can be manipulated into misusing APIs—wrong recipients, privilege escalation, or destructive actions. We evaluate tool-call validation and least-privilege design.</p>
+    </div>
+    <div class="llm-sec-card">
+      <div class="service-num">03</div>
+      <h3>Mitigations</h3>
+      <p>Input/output validation, sandboxing, monitoring, and structured red-teaming. Our writeup documents test cases and defenses we use in engagements—and how to harden your stack.</p>
+    </div>
+  </div>
+  <div class="llm-sec-cta reveal">
+    <a href="research/llm01-prompt-injection.html" class="btn-secondary">
+      Read the full writeup
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
 <!-- MARKET -->
 <section id="market">
   <div class="market-layout">
@@ -1075,6 +1158,7 @@
   <div class="footer-links">
     <a href="#solution">Services</a>
     <a href="#pipeline">Process</a>
+    <a href="#llm-security">Security</a>
     <a href="privacy.html">Privacy</a>
     <a href="contact.html">Contact</a>
   </div>
@@ -1092,7 +1176,7 @@ window.addEventListener('scroll', () => {
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.12 });
-document.querySelectorAll('.reveal, .problem-point, .service-card, .pipeline-step, .proof-card').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal, .problem-point, .service-card, .pipeline-step, .proof-card, .llm-sec-card').forEach(el => observer.observe(el));
 
 // ── Pipeline section: trigger timeline animation when in view
 const pipelineEl = document.getElementById('pipeline');
@@ -1223,6 +1307,10 @@ if (trustSection) trustObs.observe(trustSection);
 // ── Proof card stagger
 document.querySelectorAll('.proof-card').forEach((card, i) => {
   card.style.transitionDelay = (i * 0.12) + 's';
+});
+// ── LLM security card stagger
+document.querySelectorAll('.llm-sec-card').forEach((card, i) => {
+  card.style.transitionDelay = ([0.05, 0.15, 0.28][i] || i * 0.12) + 's';
 });
 </script>
 </body>
